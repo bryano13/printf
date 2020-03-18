@@ -16,6 +16,7 @@ int (*get_ptn_fcn(const char *format))(va_list)
 		{"d", print_to_numbers},
 		{"i", print_to_numbers},
 		{"s", print_to_string},
+		{"b", print_to_binary},
 		{NULL, NULL}
 	};
 
