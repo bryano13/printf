@@ -14,6 +14,7 @@ typedef struct pf
 	char *spec;
 	int (*f)(va_list);
 } prtop;
+int _printf(const char *format, ...);
 int _putchar(char c);
 void _puts(char *s);
 int _strlen(char *s);
