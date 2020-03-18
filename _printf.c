@@ -14,29 +14,31 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format[i])
 	{
 		while (format[i] != '%' && format[i])
 		{
 			_putchar(format[i]);
-			len++;
 			i++;
+			len++;
 		}
-		if (format[i] == '\0')
+		if (!format[i])
+		{
 			return (len);
+		}
 		f = get_ptn_fcn(&format[i + 1]);
-		if (f)
+		if (f != NULL)
 		{
 			len = len + f(args);
 			i = i + 2;
 			continue;
 		}
-		if (format[i + 1] == '\0')
+		if (!format[i + 1])
 			return (-1);
 		_putchar(format[i]);
 		len++;
 		if (format[i + 1] == '%')
-			i = i + 2;
+			i += 2;
 		else
 			i++;
 	}
