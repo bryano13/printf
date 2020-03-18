@@ -39,8 +39,8 @@ int _strlen(char *s)
 int print_to_string(va_list s)
 {
 	char *string = va_arg(s, char *);
-	if (!string)
-		string = "(null)";
+	/*if (!string)
+		string = "(null)";*/
 	_puts(string);
 	return (_strlen(string));
 }
