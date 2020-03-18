@@ -1,20 +1,33 @@
 #include "holberton.h"
 
-int print_to_binary(va_list args)
+/**
+ * print_to_binary - Function assigment args list.
+ * @b: Value arguments list.
+ *
+ * Return: number of binary digits.
+ */
+
+int print_to_binary(va_list b)
 {
 	unsigned int n;
 	int count = 0;
 
-	n = va_arg(args, unsigned int);
-	
-	count = count + recursive_binary(n);
+	n = va_arg(b, unsigned int);
+
+	if (n == 0)
+	{
+		count++;
+		_putchar('0');
+	}
+	else
+		count = count + recursive_binary(n);
 
 	return (count);
 }
 
 /**
- * print_to_binary - Function assigment args list.
- * @args: Value arguments list.
+ * recursive_binary - Function assigment args list.
+ * @n: Value arguments list.
  *
  * Return: number of binary digits.
 */
@@ -24,11 +37,6 @@ int recursive_binary(unsigned int n)
 	unsigned int recursive = 1;
 	int count = 0;
 
-	if (n == 0)
-	{
-		count++;
-		_putchar('\0');
-	}
 	if (n != 0)
 	{
 		recursive = n / 2;

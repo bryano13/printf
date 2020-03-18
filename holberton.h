@@ -22,6 +22,6 @@ int _printf(const char *format, ...);
 int print_to_c(va_list c);
 int print_to_numbers(va_list args);
 int print_to_string(va_list s);
-int print_to_binary(va_list args);
+int print_to_binary(va_list b);
 int recursive_binary(unsigned int n);
 #endif /* HOLBERTON_H */
