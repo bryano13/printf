@@ -41,6 +41,8 @@ int print_to_string(va_list s)
 	char *string;
 
 	string = va_arg(s, char *);
+	if (string ==NULL)
+		string == "(null)";
 	_puts(string);
 	return (_strlen(string));
 }
