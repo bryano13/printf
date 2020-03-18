@@ -1,13 +1,14 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * _printf - Prints according to a format specified
  * @format: conts char * argument
+ *
  * Return: length of printed character
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, len = 0;
+	unsigned int i = 0, len = 0;
 	va_list args;
 	int (*f)(va_list);
 
