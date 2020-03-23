@@ -27,4 +27,5 @@ int print_to_binary(va_list b);
 int recursive_binary(unsigned int n);
 int print_hex(unsigned int n, unsigned int c);
 int print_x(va_list x);
+int print_X(va_list X);
 #endif /* HOLBERTON_H */
