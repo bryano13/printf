@@ -19,6 +19,7 @@ int (*get_ptn_fcn(const char *format))(va_list)
 		{"b", print_to_binary},
 		{"x", print_x},
 		{"X", print_X},
+		{"u", print_u},
 		{NULL, NULL}
 	};
 
