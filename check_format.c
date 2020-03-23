@@ -20,6 +20,7 @@ int (*get_ptn_fcn(const char *format))(va_list)
 		{"x", print_x},
 		{"X", print_X},
 		{"u", print_u},
+		{"o", print_o},
 		{NULL, NULL}
 	};
 
